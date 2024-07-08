@@ -1,4 +1,6 @@
 			Hessian Averaged Newton Methods for Stochastic Optimization
+
+		  
 		  ___           ___           ___           ___                       ___           ___     
 	     /__/\         /  /\         /  /\         /  /\        ___          /  /\         /__/\    
 	     \  \:\       /  /:/_       /  /:/_       /  /:/_      /  /\        /  /::\        \  \:\   
