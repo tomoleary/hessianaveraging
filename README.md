@@ -1,4 +1,4 @@
-			Hessian Averaged Newton Methods for Stochastic Optimization
+			Hessian-Averaged Newton Methods for Stochastic Optimization
 
 	      ___           ___           ___           ___                       ___           ___     
 	     /__/\         /  /\         /  /\         /  /\        ___          /  /\         /__/\    
@@ -32,4 +32,3 @@ This repository accompanies the manuscript "...".
 ## Installation instruction and useage
 
 
-	            
