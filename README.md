@@ -31,4 +31,9 @@ This repository accompanies the manuscript "...".
 
 ## Installation instruction and useage
 
+If using NVIDIA GPUs, make sure that any relevant CUDA paths are set first
+
+### conda 
+
+	`conda env create -f environment.yml`
 
