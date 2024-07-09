@@ -25,7 +25,7 @@ parser.add_argument('-num_epochs', '--num_epochs', type=int, default=100, help="
 parser.add_argument('-visible_gpu', '--visible_gpu', type=int, default=0, help="Visible CUDA device")
 parser.add_argument('-run_seed', '--run_seed', type=int, default=0, help="Seed for data shuffling / initialization")
 parser.add_argument('-regularization', '--regularization', type=float, default=0.0, help="Tikhonov regularization parameter")
-parser.add_argument('-dataset_dir', '--dataset_dir', type=str, default='../data/', help="Where to load the data from")
+parser.add_argument('-dataset_dir', '--dataset_dir', type=str, default='../data/rdiff_data/pointwise/', help="Where to load the data from")
 
 parser.add_argument('-rb_choice', '--rb_choice', type=str, default='as', help="choose from [as, kle / pca, None]")
 parser.add_argument('-rb_dir', '--rb_dir', type=str, default='../reduced_bases/', help="Where to load the reduced bases from")
