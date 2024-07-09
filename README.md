@@ -31,4 +31,4 @@ This repository accompanies the manuscript "...".
 
 ## Installation instruction and useage
 
-See `INSTALL.md`
+See [`INSTALL.md`](https://github.com/tomoleary/hessianaveraging/blob/migration/INSTALL.md)

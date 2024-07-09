@@ -61,7 +61,7 @@ from hessavg import Optimizer, Adam, GradientDescent, AdaGrad, RMSProp, AdaHessi
 ################################################################################
 # Run hyperparameters
 method = args.method
-assert method in ['adam', 'adahessian','adagrad','gd','mgd','dnewton','dan','dan2','lrsfn','rmsprop']
+assert method in ['adam', 'adahessian','adagrad','gd','mgd','dnewton','dan','dan2','rmsprop']
 num_epochs = args.num_epochs
 step_size = args.step_size
 k_rank = args.k_rank
