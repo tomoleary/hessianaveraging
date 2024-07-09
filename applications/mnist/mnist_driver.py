@@ -55,7 +55,7 @@ jax.local_devices()
 # Load custom optimizers
 sys.path.append('../../')
 sys.path.append(os.environ.get('HESSAVG_PATH'))
-from hessianaveraging import Optimizer, Adam, GradientDescent, AdaGrad, RMSProp, AdaHessian, DiagonalNewton,\
+from hessavg import Optimizer, Adam, GradientDescent, AdaGrad, RMSProp, AdaHessian, DiagonalNewton,\
 					 DiagonallyAveragedNewton
 
 ################################################################################
