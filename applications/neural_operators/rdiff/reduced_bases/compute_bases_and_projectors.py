@@ -37,7 +37,7 @@ data_dir = args.data_dir
 
 assert args.obs_type in ['pointwise','full_state']
 
-data_dir += args.obs_type
+data_dir += args.obs_type +'/'
 
 ################################################################################
 # Parameters
@@ -66,7 +66,6 @@ assert dl.MPI.comm_world.size == 1, print('Not thought out in other cases yet')
 
 
 if args.basis_type.lower() == 'pod':
-	data_dir = args.data_dir
 	all_data = np.load(data_dir+'mq_data.npz')
 
 	u_data = all_data['q_data'][:args.ndata]
@@ -123,7 +122,6 @@ elif args.basis_type.lower() == 'as':
 	################################################################################
 	# Load the data
 
-	data_dir = args.data_dir
 	all_data = np.load(data_dir+'mq_data.npz')
 	all_data = np.load(data_dir+'mq_data.npz')
 	JTPhi_data = np.load(data_dir+'JstarPhi_data.npz')
