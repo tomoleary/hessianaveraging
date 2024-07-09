@@ -69,7 +69,7 @@ dataGenerator = hf.DataGenerator(observable,prior)
 
 
 
-data_dir = 'data/rdiff_test/'
+data_dir = 'data/rdiff_data/'
 data_dir+= formulation
 data_dir+='/'
 

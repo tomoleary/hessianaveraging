@@ -25,6 +25,7 @@ from dr_model import nonlinear_diffusion_reaction_model, nonlinear_diffusion_rea
 import argparse 
 parser = argparse.ArgumentParser()
 parser.add_argument('-data_dir', '--data_dir', type=str, default='../data/rdiff_data/', help="Where to save")
+parser.add_argument('-obs_type', '--obs_type', type=str, default='pointwise', help="obs_type: full_state or pointwise")
 parser.add_argument('-basis_type', '--basis_type', type=str, default='as', help="pod as or kle")
 parser.add_argument('-rank', '--rank', type=int, default=400, help="Active subspace rank")
 parser.add_argument('-oversample', '--oversample', type=int, default=10, help="Active subspace oversample")
@@ -33,6 +34,10 @@ parser.add_argument('-ndata', '--ndata', type=int, default=800, help="Number of 
 args = parser.parse_args()
 
 data_dir = args.data_dir
+
+assert args.obs_type in ['pointwise','full_state']
+
+data_dir += args.obs_type
 
 ################################################################################
 # Parameters
