@@ -48,7 +48,6 @@ t0 = time.time()
 IMAGE_SIZE = 32
 NUM_CLASSES = 10
 n_outputs = NUM_CLASSES
-sys.path.append('../')
 from dataUtilities import *
 
 train_set, test_set = get_cifar10_dataset(path_prefix = args.dataset_dir)

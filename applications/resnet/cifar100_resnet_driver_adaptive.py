@@ -86,8 +86,6 @@ NUM_CLASSES = 100
 
 n_outputs = NUM_CLASSES
 
-sys.path.append('../')
-
 from dataUtilities import *
 
 train_set, test_set = get_cifar100_dataset(path_prefix = args.dataset_dir)
