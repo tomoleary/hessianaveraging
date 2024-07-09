@@ -31,7 +31,7 @@ def get_rdiff_data(data_path, batch_size = 32, test_fraction = 0.1, input_projec
 	u_data = mu_data["q_data"]
 
 	if derivatives:
-		J_data = np.load(data_path+'/JTPhi_data.npz')['JTPhi_data'].transpose(0,2,1)
+		J_data = np.load(data_path+'/JstarPhi_data.npz')['JstarPhi_data'].transpose(0,2,1)
 
 	dM = m_data.shape[1]
 	dU = u_data.shape[1]

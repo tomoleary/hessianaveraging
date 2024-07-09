@@ -41,6 +41,7 @@ conda create -n hessavg python=3.9.16
 pip install --upgrade pip
 pip install --upgrade "jax[cuda11_pip]==0.4.24" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 pip install torch  torchvision matplotlib flax==0.6.9 optax==0.1.7 scipy==1.11.4 orbax-checkpoint==0.4.8
+pip install scikit-learn
 ```
 
 ## Dependencies
