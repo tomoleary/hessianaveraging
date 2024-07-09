@@ -377,7 +377,7 @@ for epoch in range(1,num_epochs):
 				f"loss: {metrics_history['train_loss'][-1]}, "
 				f"accuracy: {metrics_history['train_accuracy'][-1] * 100}")
 	print(f"train epoch: {epoch}, "
-					f"loss woreg: {metrics_history['train_loss_woreg'][-1]}")∂
+					f"loss woreg: {metrics_history['train_loss_woreg'][-1]}")
 	print('The metrics took', metric_time, 's')
 
 
