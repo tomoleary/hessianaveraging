@@ -24,7 +24,7 @@ from dr_model import nonlinear_diffusion_reaction_model, nonlinear_diffusion_rea
 
 formulation = 'pointwise'
 
-nsamples = 10000
+nsamples = 1000
 n_samples_pod = 100
 pod_rank = 200
 
