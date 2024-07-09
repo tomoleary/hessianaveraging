@@ -3,7 +3,7 @@
 
 These examples require the [`hippyflow`](https://github.com/hippylib/hippyflow) and [`hippylib`](https://github.com/hippylib/hippylib), which in turn require fenics 2019.1.0
 
-I recommend creating a separate environment for the process of generating the training data.
+We recommend creating a separate environment for the process of generating the training data.
 
 ### Installation
 

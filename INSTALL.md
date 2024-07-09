@@ -48,4 +48,4 @@ pip install scikit-learn
 
 The code that accompanies the manuscript was developed in 2022-2023 and builds against older versions of `flax`, `optax` and related repos such as `orbax.checkpoint`. The first version of this repo contains the code that was used to generate the experiments used in the manuscript. 
 
-In the future, I plan to update the code to work with more modern neural network codes in `jax`. 
+In the future, we plan to update the code to work with more modern neural network codes in `jax`. 
