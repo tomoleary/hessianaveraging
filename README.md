@@ -28,9 +28,11 @@
 
 This repository accompanies the manuscript ["Fast Unconstrained Optimization via Hessian Averaging and Adaptive Gradient Sampling"](https://arxiv.org/abs/2408.07268) by Thomas O'Leary-Roseberry and Raghu Bollapragada.
 
-This work was partially supported by the National Science Foundation under award DMS-234643.
-
 
 ## Installation instruction and useage
 
 See [`INSTALL.md`](https://github.com/tomoleary/hessianaveraging/blob/migration/INSTALL.md)
+
+
+
+This work was partially supported by the National Science Foundation under award DMS-234643.
