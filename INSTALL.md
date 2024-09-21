@@ -44,6 +44,8 @@ pip install torch  torchvision matplotlib flax==0.6.9 optax==0.1.7 scipy==1.11.4
 pip install scikit-learn
 ```
 
+On Mac arm architecture using `conda`, `jax` and `jaxlib` both need to be downgraded to `0.4.23` for this to work.
+
 ## Dependencies
 
 The code that accompanies the manuscript was developed in 2022-2023 and builds against older versions of `flax`, `optax` and related repos such as `orbax.checkpoint`. The first version of this repo contains the code that was used to generate the experiments used in the manuscript. 
