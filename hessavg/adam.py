@@ -15,6 +15,7 @@ from jax.flatten_util import ravel_pytree
 from jax import random
 
 from .optimizer import Optimizer
+from .globalization import armijo_line_search
 
 ################################################################################
 
@@ -22,7 +23,7 @@ class Adam(Optimizer):
 
 	def __init__(self,loss, params, lr_schedule = None,\
 			 step_size = 1e-3, beta_1 = 0.9, beta_2 = 0.999, epsilon = 1e-8,\
-			 weight_decay = None):
+			 weight_decay = None, line_search = False):
 		self.loss = loss
 		self.step_size = step_size
 		self.beta_1 = beta_1
@@ -40,6 +41,9 @@ class Adam(Optimizer):
 		if weight_decay is not None:
 			assert type(weight_decay) is float
 		self.weight_decay = weight_decay
+
+		if line_search:
+			raise print('Not implemented for this method')
 
 		super(Adam,self).__init__(loss,lr_schedule = lr_schedule)
 

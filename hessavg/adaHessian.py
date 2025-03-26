@@ -17,6 +17,7 @@ from jax.flatten_util import ravel_pytree
 from jax import random
 
 from .optimizer import Optimizer
+from .globalization import armijo_line_search
 
 ################################################################################
 
@@ -24,7 +25,8 @@ class AdaHessian(Optimizer):
 
 	def __init__(self,loss, params, lr_schedule = None, step_size = 1e-3, k_rank = 1,\
 					beta_1 = 0.9, beta_2 = 0.999, epsilon = 1e-4,\
-					take_abs = True, weight_decay = None, hessian_frequency = 1):
+					take_abs = True, weight_decay = None, hessian_frequency = 1,\
+					line_search = False):
 		"""
 		beta_2 is the exponential decay rate for averaging of the diagonal rescaling,
 		as in Adam
@@ -52,6 +54,9 @@ class AdaHessian(Optimizer):
 		if weight_decay is not None:
 			assert type(weight_decay) is float
 		self.weight_decay = weight_decay
+
+		if line_search:
+			raise print('Not implemented for this method')
 
 		super(AdaHessian,self).__init__(loss,lr_schedule)
 

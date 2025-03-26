@@ -22,7 +22,7 @@ from .optimizer import Optimizer
 class RMSProp(Optimizer):
 	def __init__(self,loss, params, lr_schedule = None,\
 			 step_size = 1e-3, gamma = 0.9, epsilon = 1e-7,\
-			 weight_decay = None):
+			 weight_decay = None, line_search = False):
 		self.loss = loss
 		self.step_size = step_size
 		self.gamma = gamma
@@ -38,6 +38,9 @@ class RMSProp(Optimizer):
 		if weight_decay is not None:
 			assert type(weight_decay) is float
 		self.weight_decay = weight_decay
+
+		if line_search:
+			raise print('Not implemented for this method')
 
 		super(RMSProp,self).__init__(loss,lr_schedule = lr_schedule)
 

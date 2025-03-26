@@ -17,7 +17,7 @@ from jax.flatten_util import ravel_pytree
 from jax import random
 
 from .optimizer import Optimizer
-
+from .globalization import armijo_line_search
 
 
 ################################################################################
@@ -25,7 +25,7 @@ from .optimizer import Optimizer
 class DiagonalNewton(Optimizer):
 
 	def __init__(self,loss, lr_schedule = None, step_size = 1e-3, k_rank = 1,\
-				 gamma_damping = 1e-4, weight_decay = None):
+				 gamma_damping = 1e-4, weight_decay = None, line_search = False):
 		self.loss = loss
 		self.step_size = step_size
 		self.k_rank = k_rank
@@ -35,6 +35,11 @@ class DiagonalNewton(Optimizer):
 		if weight_decay is not None:
 			assert type(weight_decay) is float
 		self.weight_decay = weight_decay
+
+		if line_search:
+			raise print('Not implemented for this method')
+
+
 		super(DiagonalNewton,self).__init__(loss, lr_schedule = lr_schedule)
 
 	def update(self,params,batch, hess_batch = None, batch_stats = None):
@@ -109,7 +114,8 @@ def diagonal_Newton_update(loss, params, batch,hess_batch = None,\
 class DiagonallyAveragedNewton(Optimizer):
 
 	def __init__(self,loss, params, lr_schedule = None,  step_size = 1e-3, k_rank = 1, gamma_damping = 1e-4,\
-					beta_2 = 0.999, weight_decay = None, norm_exponent = 1,hessian_frequency = 1):
+					beta_2 = 0.999, weight_decay = None, norm_exponent = 1,hessian_frequency = 1,\
+					line_search = False):
 		"""
 		beta_2 is the exponential decay rate for averaging of the diagonal rescaling,
 		as in Adam
@@ -132,6 +138,9 @@ class DiagonallyAveragedNewton(Optimizer):
 		if weight_decay is not None:
 			assert type(weight_decay) is float
 		self.weight_decay = weight_decay
+
+		if line_search:
+			raise print('Not implemented for this method')
 
 		super(DiagonallyAveragedNewton,self).__init__(loss, lr_schedule = lr_schedule)
 

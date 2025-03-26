@@ -22,3 +22,5 @@ from .fullNewton import FullNewton, FullyAveragedNewton
 from .gradientDescent import GradientDescent, MomentumGradientDescent
 
 from .rmsProp import RMSProp
+
+from .adaptiveSampling import NormTestGradientSampler
